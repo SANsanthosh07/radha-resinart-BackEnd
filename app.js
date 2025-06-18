@@ -4,11 +4,15 @@ const app = express();
 
 const getTouchs = require("./routes/getTouchRoute");
 
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ message: "Good" });
+});
+
 app.use(
   cors({
-    origin: process.env.APPLICATION_URL,
+    origin: "*",
     credentials: true,
-    methods: "GET,POST,PUT,DELETE",
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
