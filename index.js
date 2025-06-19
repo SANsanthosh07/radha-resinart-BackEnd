@@ -16,7 +16,7 @@ app.get("/api/health", (req, res) => {
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.APPLICATION_URL,
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
