@@ -23,7 +23,7 @@ const handlePostGetTouch = async (req, res) => {
     logger.info("Data stored in MongoDB successfully");
 
     const sendMailResult = await sendMail({
-      to: "mahihacker07@gmail.com",
+      to: ["mahihacker07@gmail.com", "drypointresinart@gmail.com"],
       subject: `New Customer Details & Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
     });
