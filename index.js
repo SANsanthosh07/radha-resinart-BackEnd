@@ -1,4 +1,4 @@
-const Logger = require("../BackEnd/utils/logger");
+const Logger = require("./utils/logger");
 const app = require("./app");
 const dotenv = require("dotenv");
 const chalk = require("chalk");
