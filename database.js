@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const logger = require("./utils/logger");
-const chalk = require("chalk");
 
 const connectDb = async () => {
   try {
@@ -8,8 +6,7 @@ const connectDb = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    logger.info(chalk.bgGreenBright(`MongoDb Connected Successfully`));
-    // console.log("MongoDb Connected Successfully");
+    console.log("MongoDb Connected Successfully");
   } catch (error) {
     console.error("Error in Db Connection", error);
   }
